@@ -1,4 +1,4 @@
-package com.codeclan.example.demo.configurations;
-
-public interface RepositoryRestConfigurer {
-}
+//package com.codeclan.example.demo.configurations;
+//
+//public interface RepositoryRestConfigurer {
+//}

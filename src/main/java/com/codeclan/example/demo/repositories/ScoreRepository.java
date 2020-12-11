@@ -11,6 +11,7 @@ public interface ScoreRepository extends JpaRepository<Score, Long> {
 
     List<Score> findByGameNameIgnoreCase(String gameName);
     List<Score> findByPlayerNameIgnoreCase(String playerName);
+    List<Score> findByPlayerNameIgnoreCaseAndGameNameIgnoreCase(String playerName, String gameName);
 
 
 }

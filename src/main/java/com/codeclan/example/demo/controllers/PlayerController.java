@@ -17,12 +17,16 @@ public class PlayerController {
     PlayerRepository playerRepository;
 
     @GetMapping(value = "/players")
-    public ResponseEntity<List<Player>> getAllPlayers(){
+    public ResponseEntity<List<Player>> getAllPlayers(
+            @RequestParam(value = "name", required = false) String playerName){
+    if (playerName != null) {
+        return new ResponseEntity<>(playerRepository.findByNameIgnoreCase(playerName), HttpStatus.OK);
+    }
         return new ResponseEntity<>(playerRepository.findAll(), HttpStatus.OK);
     }
 
     @GetMapping(value = "/players/{id}")
-    public ResponseEntity<Optional<Player>> getPlayerById(@PathVariable Long id){
+    public ResponseEntity<Optional<Player>> getPlayerById(@PathVariable Long id) {
         return new ResponseEntity<>(playerRepository.findById(id), HttpStatus.OK);
     }
 

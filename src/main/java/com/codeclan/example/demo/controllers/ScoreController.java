@@ -20,10 +20,21 @@ public class ScoreController {
     ScoreRepository scoreRepository;
 
     @GetMapping(value = "/scores")
-    public ResponseEntity<List<Score>> getAllScoresByGame(@RequestParam(value = "game", required = false) String gameName) {
-        if (gameName != null) {
-            return new ResponseEntity<>(scoreRepository.findByGameIgnoreCase(gameName), HttpStatus.OK);
+    public ResponseEntity<List<Score>> getAllScores(
+            @RequestParam(value = "game", required = false) String gameName,
+            @RequestParam(value = "player", required = false) String playerName
+
+    ) {
+        if
+        (gameName != null) {
+            return new ResponseEntity<>(scoreRepository.findByGameNameIgnoreCase(gameName), HttpStatus.OK);
         }
+        else if
+        (playerName != null) {
+            return new ResponseEntity<>(scoreRepository.findByPlayerNameIgnoreCase(playerName), HttpStatus.OK);
+
+
+        } else
         return new ResponseEntity<>(scoreRepository.findAll(), HttpStatus.OK);
     }
 

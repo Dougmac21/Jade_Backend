@@ -28,7 +28,7 @@ public class Score {
     @Column(name = "date")
     private String date;
 
-    public Score(Game game, Player player, Integer score, String name, String date) {
+    public Score(Game game, Player player, Integer score, String date) {
         this.game = game;
         this.player = player;
         this.score = score;

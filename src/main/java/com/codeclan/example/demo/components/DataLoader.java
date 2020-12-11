@@ -70,8 +70,11 @@ public class DataLoader implements ApplicationRunner {
         Score PRSPlayerFour = new Score(PRS, playerFour, 40, "2020-12-09");
         scoreRepository.save(PRSPlayerFour);
 
-        Score snakePlayerFour = new Score(snake, playerFour, 80, "2020-12-09");
-        scoreRepository.save(snakePlayerFour);
+        Score breakoutPlayerFour = new Score(breakout, playerFour, 80, "2020-12-09");
+        scoreRepository.save(breakoutPlayerFour);
+
+        Score breakoutPlayerOne = new Score(breakout, playerOne, 30, "2020-12-10");
+        scoreRepository.save(breakoutPlayerOne);
 
 
     }

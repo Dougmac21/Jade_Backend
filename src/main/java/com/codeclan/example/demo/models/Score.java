@@ -1,7 +1,5 @@
 package com.codeclan.example.demo.models;
 
-import com.codeclan.example.demo.models.Game;
-import com.codeclan.example.demo.models.Player;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;

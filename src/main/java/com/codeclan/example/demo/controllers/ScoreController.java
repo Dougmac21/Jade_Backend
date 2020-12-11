@@ -1,5 +1,6 @@
 package com.codeclan.example.demo.controllers;
 
+import com.codeclan.example.demo.models.Game;
 import com.codeclan.example.demo.models.Player;
 import com.codeclan.example.demo.models.Score;
 import com.codeclan.example.demo.repositories.PlayerRepository;
@@ -19,7 +20,10 @@ public class ScoreController {
     ScoreRepository scoreRepository;
 
     @GetMapping(value = "/scores")
-    public ResponseEntity<List<Score>> getAllScores(){
+    public ResponseEntity<List<Score>> getAllScoresByGame(@RequestParam(value = "game", required = false) String gameName) {
+        if (gameName != null) {
+            return new ResponseEntity<>(scoreRepository.findByGameIgnoreCase(gameName), HttpStatus.OK);
+        }
         return new ResponseEntity<>(scoreRepository.findAll(), HttpStatus.OK);
     }
 
@@ -33,6 +37,8 @@ public class ScoreController {
         Score newScore = scoreRepository.save(score); // saves the return from the .save to the newScore variable
         return new ResponseEntity<>(newScore, HttpStatus.CREATED);
     }
+
+
 
 
 }

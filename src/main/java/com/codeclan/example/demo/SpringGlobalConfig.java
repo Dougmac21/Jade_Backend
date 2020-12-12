@@ -1,4 +1,4 @@
-package com.codeclan.example.demo.configurations;
+package com.codeclan.example.demo;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
@@ -7,7 +7,7 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-public abstract class SpringGlobalConfig implements RepositoryRestConfigurer, WebMvcConfigurer {
+public class SpringGlobalConfig implements RepositoryRestConfigurer, WebMvcConfigurer {
 
     private static final String CORS_BASE_PATTERN = "/**";
     private static final String ALLOWED_ORIGINS = "*";

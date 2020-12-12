@@ -18,9 +18,17 @@ public class PlayerController {
 
     @GetMapping(value = "/players")
     public ResponseEntity<List<Player>> getAllPlayers(
-            @RequestParam(value = "name", required = false) String playerName){
-    if (playerName != null) {
+            @RequestParam(value = "name", required = false) String playerName,
+            @RequestParam(value = "gamename", required = false) String gameName
+
+    ){
+    if
+    (playerName != null) {
         return new ResponseEntity<>(playerRepository.findByNameIgnoreCase(playerName), HttpStatus.OK);
+    }
+    else if
+    (gameName != null) {
+        return new ResponseEntity<>(playerRepository.findByGameNameIgnoreCase(gameName), HttpStatus.OK);
     }
         return new ResponseEntity<>(playerRepository.findAll(), HttpStatus.OK);
     }

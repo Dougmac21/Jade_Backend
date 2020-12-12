@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.xml.transform.OutputKeys;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,6 +33,7 @@ public class ScoreController {
         else if
         (playerName != null) {
             return new ResponseEntity<>(scoreRepository.findByPlayerNameIgnoreCase(playerName), HttpStatus.OK);
+
 
 
         } else

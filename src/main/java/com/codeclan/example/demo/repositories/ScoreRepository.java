@@ -9,8 +9,13 @@ import java.util.List;
 @Repository
 public interface ScoreRepository extends JpaRepository<Score, Long> {
 
+//    (Find scores by game name)
     List<Score> findByGameNameIgnoreCase(String gameName);
+
+//    (Find scores by player name)
     List<Score> findByPlayerNameIgnoreCase(String playerName);
+
+//    (Find scores by player name and game name)
     List<Score> findByPlayerNameIgnoreCaseAndGameNameIgnoreCase(String playerName, String gameName);
 
 

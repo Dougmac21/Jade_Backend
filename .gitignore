@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+/db/jade_arcade_backend.mv.db
+/db/jade_arcade_backend.trace.db

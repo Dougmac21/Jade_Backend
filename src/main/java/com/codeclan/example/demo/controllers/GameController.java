@@ -27,10 +27,7 @@ public class GameController {
         (gameName != null) {
             return new ResponseEntity<>(gameRepository.findByNameIgnoreCase(gameName), HttpStatus.OK);
         }
-        if
-        (playerName != null) {
-            return new ResponseEntity<>(gameRepository.findByPlayerNameIgnoreCase(playerName), HttpStatus.OK);
-        }
+
         return new ResponseEntity<>(gameRepository.findAll(), HttpStatus.OK);
     }
 

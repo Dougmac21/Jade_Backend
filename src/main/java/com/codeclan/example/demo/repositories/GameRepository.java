@@ -12,7 +12,5 @@ public interface GameRepository extends JpaRepository<Game, Long> {
 //    (Find games by name)
     List<Game> findByNameIgnoreCase(String gameName);
 
-//    (Find games by player name)
-    List<Game> findByPlayerNameIgnoreCase(String playerName);
 
 }

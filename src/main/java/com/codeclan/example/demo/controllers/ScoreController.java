@@ -27,6 +27,10 @@ public class ScoreController {
 
     ) {
         if
+        (gameName != null && playerName != null) {
+            return new ResponseEntity<>(scoreRepository.findByPlayerNameIgnoreCaseAndGameNameIgnoreCase(playerName, gameName), HttpStatus.OK);
+        }
+        else if
         (gameName != null) {
             return new ResponseEntity<>(scoreRepository.findByGameNameIgnoreCase(gameName), HttpStatus.OK);
         }

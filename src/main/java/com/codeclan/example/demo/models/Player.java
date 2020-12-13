@@ -1,7 +1,6 @@
 package com.codeclan.example.demo.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -18,6 +17,9 @@ public class Player {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "password")
+    private String password;
+
     @Column(name = "arcade_play_time")
     private Integer arcade_play_time;
 
@@ -25,8 +27,9 @@ public class Player {
     @JsonIgnoreProperties(value = "player")
     private List<Score> scores;
 
-    public Player(String name) {
+    public Player(String name, String password) {
         this.name = name;
+        this.password = password;
         this.arcade_play_time = 0;
         this.scores = new ArrayList<>();
     }
@@ -47,6 +50,14 @@ public class Player {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Integer getArcade_play_time() {

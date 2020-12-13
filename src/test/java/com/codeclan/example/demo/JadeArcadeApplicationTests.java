@@ -36,7 +36,7 @@ class JadeArcadeApplicationTests {
 	@Test
 	public void canCreatePlayerGameAndScoreThenSave(){
 
-		Player testPlayer = new Player("Mister TestPlayer");
+		Player testPlayer = new Player("Mister TestPlayer", "A");
 		Game testGame = new Game("The Test Game");
 		Score testScore = new Score(testGame, testPlayer, 1000, "2020-12-01");
 		playerRepository.save(testPlayer);
@@ -45,6 +45,7 @@ class JadeArcadeApplicationTests {
 
 		List<Player> foundPlayers = playerRepository.findByNameIgnoreCase("mister testplayer");
 		assertEquals("Mister TestPlayer", foundPlayers.get(0).getName());
+		assertEquals("A", foundPlayers.get(0).getPassword());
 
 		List<Game> foundGames = gameRepository.findByNameIgnoreCase("the test game");
 		assertEquals("The Test Game", foundGames.get(0).getName());

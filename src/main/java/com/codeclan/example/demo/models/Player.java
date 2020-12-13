@@ -21,16 +21,6 @@ public class Player {
     @Column(name = "arcade_play_time")
     private Integer arcade_play_time;
 
-//    @ManyToMany
-//    @JsonIgnoreProperties({"players"})
-//    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
-//    @JoinTable(
-//            name = "players_games",
-//            joinColumns = {@JoinColumn(name = "player_id", nullable = false, updatable = false)},
-//            inverseJoinColumns = {@JoinColumn(name = "game_id", nullable = false, updatable = false)}
-//    )
-//    private List<Game> games;
-
     @OneToMany(mappedBy = "player", fetch = FetchType.LAZY)
     @JsonIgnoreProperties(value = "players")
     private List<Score> scores;
@@ -38,7 +28,6 @@ public class Player {
     public Player(String name) {
         this.name = name;
         this.arcade_play_time = 0;
-//        this.games = new ArrayList<>();
         this.scores = new ArrayList<>();
     }
 
@@ -67,14 +56,6 @@ public class Player {
     public void setArcade_play_time(Integer arcade_play_time) {
         this.arcade_play_time = arcade_play_time;
     }
-
-//    public List<Game> getGames() {
-//        return games;
-//    }
-//
-//    public void setGames(List<Game> games) {
-//        this.games = games;
-//    }
 
     public List<Score> getScores() {
         return scores;

@@ -22,7 +22,7 @@ public class Game {
     private Integer total_play_time;
 
     @OneToMany(mappedBy = "game", fetch = FetchType.LAZY)
-    @JsonIgnoreProperties(value = "games")
+    @JsonIgnoreProperties(value = "game")
     private List<Score> scores;
 
     public Game(String name) {

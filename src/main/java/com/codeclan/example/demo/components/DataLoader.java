@@ -28,16 +28,16 @@ public class DataLoader implements ApplicationRunner {
 
     public void run(ApplicationArguments args){
 
-        Player playerOne = new Player("Player One");
+        Player playerOne = new Player("Player One", "A");
         playerRepository.save(playerOne);
 
-        Player playerTwo = new Player("Player Two");
+        Player playerTwo = new Player("Player Two", "A");
         playerRepository.save(playerTwo);
 
-        Player playerThree = new Player("Player Three");
+        Player playerThree = new Player("Player Three", "A");
         playerRepository.save(playerThree);
 
-        Player playerFour = new Player("Player Four");
+        Player playerFour = new Player("Player Four", "A");
         playerRepository.save(playerFour);
 
         Game snake = new Game("Snake");

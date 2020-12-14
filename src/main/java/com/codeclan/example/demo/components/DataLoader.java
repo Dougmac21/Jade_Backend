@@ -46,11 +46,17 @@ public class DataLoader implements ApplicationRunner {
         Game runner = new Game("Runner");
         gameRepository.save(runner);
 
-        Game PRS = new Game("Paper, Rock, Scissors");
+        Game PRS = new Game("PRS");
         gameRepository.save(PRS);
 
         Game breakout = new Game("Breakout");
         gameRepository.save(breakout);
+
+        Game frogger = new Game("Frogger");
+        gameRepository.save(frogger);
+
+        Game shooter = new Game("Shooter");
+        gameRepository.save(shooter);
 
         Score snakePlayerOne = new Score(snake, playerOne, 100, "2020-12-10");
         scoreRepository.save(snakePlayerOne);
@@ -75,6 +81,15 @@ public class DataLoader implements ApplicationRunner {
 
         Score breakoutPlayerOne = new Score(breakout, playerOne, 30, "2020-12-10");
         scoreRepository.save(breakoutPlayerOne);
+
+        Score froggerPlayerOne = new Score(frogger, playerOne, 20, "2020-12-02");
+        scoreRepository.save(froggerPlayerOne);
+
+        Score froggerPlayerOne_2 = new Score(frogger, playerOne, 700, "2020-12-14");
+        scoreRepository.save(froggerPlayerOne_2);
+
+        Score shooterPlayerOne = new Score(shooter, playerOne, 86, "2020-12-15");
+        scoreRepository.save(shooterPlayerOne);
 
 
     }

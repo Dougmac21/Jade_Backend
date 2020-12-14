@@ -22,8 +22,8 @@ public class ScoreController {
 
     @GetMapping(value = "/scores")
     public ResponseEntity<List<Score>> getAllScores(
-            @RequestParam(value = "game", required = false) String gameName,
-            @RequestParam(value = "player", required = false) String playerName
+            @RequestParam(value = "gamename", required = false) String gameName,
+            @RequestParam(value = "playername", required = false) String playerName
 
     ) {
         if

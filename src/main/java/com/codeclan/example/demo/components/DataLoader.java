@@ -82,11 +82,26 @@ public class DataLoader implements ApplicationRunner {
         Score breakoutPlayerOne = new Score(breakout, playerOne, 30, "2020-12-10");
         scoreRepository.save(breakoutPlayerOne);
 
-        Score froggerPlayerOne = new Score(frogger, playerOne, 20, "2020-12-02");
+        Score froggerPlayerOne = new Score(frogger, playerOne, 110, "2020-12-02");
         scoreRepository.save(froggerPlayerOne);
 
-        Score froggerPlayerOne_2 = new Score(frogger, playerOne, 700, "2020-12-14");
+        Score froggerPlayerOne_2 = new Score(frogger, playerOne, 120, "2020-12-14");
         scoreRepository.save(froggerPlayerOne_2);
+
+        Score froggerPlayerOne_3 = new Score(frogger, playerOne, 310, "2020-12-14");
+        scoreRepository.save(froggerPlayerOne_3);
+
+        Score froggerPlayerOne_4 = new Score(frogger, playerOne, 440, "2020-12-14");
+        scoreRepository.save(froggerPlayerOne_4);
+
+        Score froggerPlayerOne_5 = new Score(frogger, playerOne, 560, "2020-12-14");
+        scoreRepository.save(froggerPlayerOne_5);
+
+        Score froggerPlayerOne_6 = new Score(frogger, playerOne, 620, "2020-12-14");
+        scoreRepository.save(froggerPlayerOne_6);
+
+        Score froggerPlayerOne_7 = new Score(frogger, playerOne, 700, "2020-12-14");
+        scoreRepository.save(froggerPlayerOne_7);
 
         Score shooterPlayerOne = new Score(shooter, playerOne, 86, "2020-12-15");
         scoreRepository.save(shooterPlayerOne);

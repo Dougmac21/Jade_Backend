@@ -134,16 +134,16 @@ public class DataLoader implements ApplicationRunner {
         Score snake4 = new Score(snake, maria, 4, "2020-12-09");
         scoreRepository.save(snake4);
 
-        Score snake5 = new Score(snake, alan, 23, "2020-12-08");
-        scoreRepository.save(snake5);
+//        Score snake5 = new Score(snake, alan, 3, "2020-12-08");
+//        scoreRepository.save(snake5);
 
 
 //        SCORES - PRS
 
-        Score prs1 = new Score(PRS, jenken, 87, "2020-12-09");
+        Score prs1 = new Score(PRS, harrison, 999, "2020-12-14");
         scoreRepository.save(prs1);
 
-        Score prs2 = new Score(PRS, ann, 80, "2020-12-09");
+        Score prs2 = new Score(PRS, jenken, 80, "2020-12-09");
         scoreRepository.save(prs2);
 
         Score prs3 = new Score(PRS, mattM, 51, "2020-12-10");
@@ -152,8 +152,10 @@ public class DataLoader implements ApplicationRunner {
         Score prs4 = new Score(PRS, yana, 49, "2020-12-02");
         scoreRepository.save(prs4);
 
-        Score prs5 = new Score(PRS, harrison, 999, "2020-12-14");
-        scoreRepository.save(prs5);
+//        Score prs5 = new Score(PRS, ann, 48, "2020-12-09");
+//        scoreRepository.save(prs5);
+
+
 
 
 //        SCORES - breakout
@@ -167,7 +169,7 @@ public class DataLoader implements ApplicationRunner {
         Score breakout3 = new Score(breakout, eugene, 11, "2020-12-14");
         scoreRepository.save(breakout3);
 
-        Score breakout4 = new Score(breakout, paul, 10, "2020-12-14");
+        Score breakout4 = new Score(breakout, alan, 10, "2020-12-14");
         scoreRepository.save(breakout4);
 
         Score breakout5 = new Score(breakout, mattH, 9, "2020-12-14");
@@ -202,7 +204,7 @@ public class DataLoader implements ApplicationRunner {
         Score space3 = new Score(spaceInvaders, yana, 74, "2020-12-15");
         scoreRepository.save(space3);
 
-        Score space4 = new Score(spaceInvaders, maria, 86, "2020-12-15");
+        Score space4 = new Score(spaceInvaders, ann, 86, "2020-12-15");
         scoreRepository.save(space4);
 
         Score space5 = new Score(spaceInvaders, mattM, 86, "2020-12-15");

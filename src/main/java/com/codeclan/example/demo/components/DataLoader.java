@@ -28,23 +28,84 @@ public class DataLoader implements ApplicationRunner {
 
     public void run(ApplicationArguments args){
 
-        Player playerOne = new Player("Player One", "A");
-        playerRepository.save(playerOne);
+//        PLAYERS
 
-        Player playerTwo = new Player("Player Two", "A");
-        playerRepository.save(playerTwo);
+        Player jenken = new Player("Jenken", "A");
+        playerRepository.save(jenken);
 
-        Player playerThree = new Player("Player Three", "A");
-        playerRepository.save(playerThree);
+        Player amy = new Player("Amy", "A");
+        playerRepository.save(amy);
 
-        Player playerFour = new Player("Player Four", "A");
-        playerRepository.save(playerFour);
+        Player doug = new Player("Doug", "A");
+        playerRepository.save(doug);
+
+        Player emmi = new Player("Emmi", "A");
+        playerRepository.save(emmi);
+
+        Player malcolm = new Player("Malcolm", "A");
+        playerRepository.save(malcolm);
+
+        Player chris = new Player("Chris", "A");
+        playerRepository.save(chris);
+
+        Player eugene = new Player("Eugene", "A");
+        playerRepository.save(eugene);
+
+        Player harrison = new Player("Harrison", "A");
+        playerRepository.save(harrison);
+
+        Player dave = new Player("Dave", "A");
+        playerRepository.save(dave);
+
+        Player cat = new Player("Cat", "A");
+        playerRepository.save(cat);
+
+        Player maria = new Player("Maria", "A");
+        playerRepository.save(maria);
+
+        Player yana = new Player("Yana", "A");
+        playerRepository.save(yana);
+
+        Player paul = new Player("Paul", "A");
+        playerRepository.save(paul);
+
+        Player andrew = new Player("Andrew", "A");
+        playerRepository.save(andrew);
+
+        Player ann = new Player("Ann", "A");
+        playerRepository.save(ann);
+
+        Player mattH = new Player("Matt H", "A");
+        playerRepository.save(mattH);
+
+        Player mattT = new Player("Matt T", "A");
+        playerRepository.save(mattT);
+
+        Player mattM = new Player("Matt M", "A");
+        playerRepository.save(mattM);
+
+        Player iain = new Player("Iain", "A");
+        playerRepository.save(iain);
+
+        Player alan = new Player("Alan", "A");
+        playerRepository.save(alan);
+
+        Player steven = new Player("Steven", "A");
+        playerRepository.save(steven);
+
+
+
+
+
+
+//        GAMES
+
 
         Game snake = new Game("Snake");
         gameRepository.save(snake);
 
-        Game runner = new Game("Runner");
-        gameRepository.save(runner);
+        Game spaceInvaders = new Game("Space Invaders");
+        gameRepository.save(spaceInvaders);
 
         Game PRS = new Game("PRS");
         gameRepository.save(PRS);
@@ -55,57 +116,117 @@ public class DataLoader implements ApplicationRunner {
         Game frogger = new Game("Frogger");
         gameRepository.save(frogger);
 
-        Game shooter = new Game("Shooter");
-        gameRepository.save(shooter);
+        Game pacman = new Game("Pacman");
+        gameRepository.save(pacman);
 
-        Score snakePlayerOne = new Score(snake, playerOne, 100, "2020-12-10");
-        scoreRepository.save(snakePlayerOne);
 
-        Score snakePlayerTwo = new Score(snake, playerTwo, 50, "2020-12-10");
-        scoreRepository.save(snakePlayerTwo);
+//        SCORES - snake
 
-        Score runnerPlayerTwo = new Score(runner, playerTwo, 40, "2020-12-09");
-        scoreRepository.save(runnerPlayerTwo);
+        Score snake1 = new Score(snake, emmi, 104, "2020-12-10");
+        scoreRepository.save(snake1);
 
-        Score runnerPlayerThree = new Score(runner, playerThree, 30, "2020-12-09");
-        scoreRepository.save(runnerPlayerThree);
+        Score snake2 = new Score(snake, andrew, 10, "2020-12-10");
+        scoreRepository.save(snake2);
 
-        Score PRSPlayerThree = new Score(PRS, playerThree, 50, "2020-12-08");
-        scoreRepository.save(PRSPlayerThree);
+        Score snake3 = new Score(snake, iain, 8, "2020-12-09");
+        scoreRepository.save(snake3);
 
-        Score PRSPlayerFour = new Score(PRS, playerFour, 40, "2020-12-09");
-        scoreRepository.save(PRSPlayerFour);
+        Score snake4 = new Score(snake, maria, 4, "2020-12-09");
+        scoreRepository.save(snake4);
 
-        Score breakoutPlayerFour = new Score(breakout, playerFour, 80, "2020-12-09");
-        scoreRepository.save(breakoutPlayerFour);
+//        Score snake5 = new Score(snake, alan, 3, "2020-12-08");
+//        scoreRepository.save(snake5);
 
-        Score breakoutPlayerOne = new Score(breakout, playerOne, 30, "2020-12-10");
-        scoreRepository.save(breakoutPlayerOne);
 
-        Score froggerPlayerOne = new Score(frogger, playerOne, 110, "2020-12-02");
-        scoreRepository.save(froggerPlayerOne);
+//        SCORES - PRS
 
-        Score froggerPlayerOne_2 = new Score(frogger, playerOne, 120, "2020-12-14");
-        scoreRepository.save(froggerPlayerOne_2);
+        Score prs1 = new Score(PRS, harrison, 999, "2020-12-14");
+        scoreRepository.save(prs1);
 
-        Score froggerPlayerOne_3 = new Score(frogger, playerOne, 310, "2020-12-14");
-        scoreRepository.save(froggerPlayerOne_3);
+        Score prs2 = new Score(PRS, jenken, 80, "2020-12-09");
+        scoreRepository.save(prs2);
 
-        Score froggerPlayerOne_4 = new Score(frogger, playerOne, 440, "2020-12-14");
-        scoreRepository.save(froggerPlayerOne_4);
+        Score prs3 = new Score(PRS, mattM, 51, "2020-12-10");
+        scoreRepository.save(prs3);
 
-        Score froggerPlayerOne_5 = new Score(frogger, playerOne, 560, "2020-12-14");
-        scoreRepository.save(froggerPlayerOne_5);
+        Score prs4 = new Score(PRS, yana, 49, "2020-12-02");
+        scoreRepository.save(prs4);
 
-        Score froggerPlayerOne_6 = new Score(frogger, playerOne, 620, "2020-12-14");
-        scoreRepository.save(froggerPlayerOne_6);
+//        Score prs5 = new Score(PRS, ann, 48, "2020-12-09");
+//        scoreRepository.save(prs5);
 
-        Score froggerPlayerOne_7 = new Score(frogger, playerOne, 700, "2020-12-14");
-        scoreRepository.save(froggerPlayerOne_7);
 
-        Score shooterPlayerOne = new Score(shooter, playerOne, 86, "2020-12-15");
-        scoreRepository.save(shooterPlayerOne);
 
+
+//        SCORES - breakout
+
+        Score breakout1 = new Score(breakout, doug, 310, "2020-12-14");
+        scoreRepository.save(breakout1);
+
+        Score breakout2 = new Score(breakout, cat, 12, "2020-12-14");
+        scoreRepository.save(breakout2);
+
+        Score breakout3 = new Score(breakout, eugene, 11, "2020-12-14");
+        scoreRepository.save(breakout3);
+
+        Score breakout4 = new Score(breakout, alan, 10, "2020-12-14");
+        scoreRepository.save(breakout4);
+
+        Score breakout5 = new Score(breakout, mattH, 9, "2020-12-14");
+        scoreRepository.save(breakout5);
+
+
+//        SCORES - pacman
+
+        Score pacman1 = new Score(pacman, amy, 886, "2020-12-15");
+        scoreRepository.save(pacman1);
+
+        Score pacman2 = new Score(pacman, mattT, 610, "2020-12-15");
+        scoreRepository.save(pacman2);
+
+        Score pacman3 = new Score(pacman, chris, 588, "2020-12-15");
+        scoreRepository.save(pacman3);
+
+        Score pacman4 = new Score(pacman, dave, 577, "2020-12-15");
+        scoreRepository.save(pacman4);
+
+        Score pacman5 = new Score(pacman, iain, 542, "2020-12-15");
+        scoreRepository.save(pacman5);
+
+//          SCORES - spaceInvaders
+
+        Score space1 = new Score(spaceInvaders, malcolm, 99, "2020-12-15");
+        scoreRepository.save(space1);
+
+        Score space2 = new Score(spaceInvaders, dave, 76, "2020-12-15");
+        scoreRepository.save(space2);
+
+        Score space3 = new Score(spaceInvaders, yana, 74, "2020-12-15");
+        scoreRepository.save(space3);
+
+        Score space4 = new Score(spaceInvaders, ann, 86, "2020-12-15");
+        scoreRepository.save(space4);
+
+        Score space5 = new Score(spaceInvaders, mattM, 86, "2020-12-15");
+        scoreRepository.save(space5);
+
+//        SCORES - frogger
+
+
+        Score frogger1 = new Score(frogger, paul, 86, "2020-12-15");
+        scoreRepository.save(frogger1);
+
+        Score frogger2 = new Score(frogger, emmi, 86, "2020-12-15");
+        scoreRepository.save(frogger2);
+
+        Score frogger3 = new Score(frogger, doug, 85, "2020-12-15");
+        scoreRepository.save(frogger3);
+
+        Score frogger4 = new Score(frogger, malcolm, 81, "2020-12-15");
+        scoreRepository.save(frogger4);
+
+        Score frogger5 = new Score(frogger, dave, 80, "2020-12-15");
+        scoreRepository.save(frogger5);
 
     }
 

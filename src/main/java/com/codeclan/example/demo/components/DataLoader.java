@@ -122,17 +122,17 @@ public class DataLoader implements ApplicationRunner {
 
 //        SCORES - snake
 
-        Score snake1 = new Score(snake, emmi, 104, "2020-12-10");
-        scoreRepository.save(snake1);
-
-        Score snake2 = new Score(snake, andrew, 10, "2020-12-10");
-        scoreRepository.save(snake2);
-
-        Score snake3 = new Score(snake, iain, 8, "2020-12-09");
-        scoreRepository.save(snake3);
-
-        Score snake4 = new Score(snake, maria, 4, "2020-12-09");
-        scoreRepository.save(snake4);
+//        Score snake1 = new Score(snake, emmi, 104, "2020-12-10");
+//        scoreRepository.save(snake1);
+//
+//        Score snake2 = new Score(snake, andrew, 10, "2020-12-10");
+//        scoreRepository.save(snake2);
+//
+//        Score snake3 = new Score(snake, iain, 8, "2020-12-09");
+//        scoreRepository.save(snake3);
+//
+//        Score snake4 = new Score(snake, maria, 4, "2020-12-09");
+//        scoreRepository.save(snake4);
 
 //        Score snake5 = new Score(snake, alan, 3, "2020-12-08");
 //        scoreRepository.save(snake5);
@@ -140,20 +140,20 @@ public class DataLoader implements ApplicationRunner {
 
 //        SCORES - PRS
 
-        Score prs1 = new Score(PRS, harrison, 999, "2020-12-14");
+        Score prs1 = new Score(PRS, harrison, 99999, "2020-12-14");
         scoreRepository.save(prs1);
 
-        Score prs2 = new Score(PRS, jenken, 80, "2020-12-09");
+        Score prs2 = new Score(PRS, jenken, 800, "2020-12-09");
         scoreRepository.save(prs2);
 
-        Score prs3 = new Score(PRS, mattM, 51, "2020-12-10");
+        Score prs3 = new Score(PRS, mattM, 510, "2020-12-10");
         scoreRepository.save(prs3);
 
-        Score prs4 = new Score(PRS, yana, 49, "2020-12-02");
+        Score prs4 = new Score(PRS, yana, 490, "2020-12-02");
         scoreRepository.save(prs4);
 
-//        Score prs5 = new Score(PRS, ann, 48, "2020-12-09");
-//        scoreRepository.save(prs5);
+        Score prs5 = new Score(PRS, ann, 480, "2020-12-09");
+        scoreRepository.save(prs5);
 
 
 
